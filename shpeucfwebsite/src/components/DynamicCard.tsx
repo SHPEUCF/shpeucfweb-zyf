@@ -50,7 +50,7 @@ export default ({ hasHead, headText, hasBody, bodyText, hasLink, link, hasButton
             
             {
                 hasButton && (
-                    <DynamicButton text={buttonText} hasLink={true} link={link} />
+                    <DynamicButton text={buttonText} hasLink={hasLink} link={link} />
                 )
             }
 
