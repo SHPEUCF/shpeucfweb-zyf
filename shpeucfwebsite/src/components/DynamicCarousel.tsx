@@ -21,8 +21,6 @@ export default ({ imageSRCList }:DynamicCarouselProps) => {
     // Controls the current image being shown in the carousel
     const [ showImageByID, setShowImageByID ] = useState(0);
 
-    console.log(showImageByID, imageSRCList[showImageByID]);
-
     useEffect(() => {
 
     }, [ showImageByID ]);
