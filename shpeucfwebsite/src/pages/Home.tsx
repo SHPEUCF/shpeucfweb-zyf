@@ -24,13 +24,15 @@ export default () => {
         { name: "Andres Acevedo", position: "Vice President", imageSRC: "./pictures/board/AndresA.png" },
         { name: "Steph Colton", position: "Secretary", imageSRC: "./pictures/board/StephC.png" },
         { name: "Cecille Castro", position: "Treasurer", imageSRC: "./pictures/board/CecilleC.png" },
+        { name: "Alan Luko", position: "Corporate Affairs Chair", imageSRC: "./pictures/board/AlanL.png" },
+        { name: "Anne Reed", position: "External Chair", imageSRC: "./pictures/board/AnneR.png" },
+        { name: "Valentina Medina", position: "Marketing Chair", imageSRC: "./pictures/board/ValM.png" },
         { name: "Richard Hudson", position: "Pro Dev Co-Chair", imageSRC: "./pictures/board/RichardH.png" },
         { name: "Gabriela Medina", position: "Pro Dev Co-Chair", imageSRC: "./pictures/board/GabrielaM.png" },
-        { name: "Alan Luko", position: "Corporate Affairs Co-Chair", imageSRC: "./pictures/board/AlanL.png" },
-        { name: "Anne Reed", position: "External Chair", imageSRC: "./pictures/board/AnneR.png" },
-        { name: "Brendan Nocci", position: "Projects Chai", imageSRC: "./pictures/board/BrendanN.png" },
-        { name: "Elena Torres", position: "Corporate Affairs Co-Chair", imageSRC: "./pictures/board/ElenaT.png" },
-        { name: "Valentina Medina", position: "Marketing Chair", imageSRC: "./pictures/board/ValentinaM.png" }
+        { name: "Brenden Nocca", position: "Projects Chair", imageSRC: "./pictures/board/BrendenN.png" },
+        { name: "Juan Trawczynski", position: "Social Chair", imageSRC: "./pictures/board/JuanT.png" },
+        { name: "Bea Navas", position: "SHPEtinas Chair", imageSRC: "./pictures/board/BeaN.png" },
+        { name: "Bryce Villanueva", position: "Technology Chair", imageSRC: "./pictures/board/BryceV.png" },
     ];
 
     return (

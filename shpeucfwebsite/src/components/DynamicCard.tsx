@@ -58,7 +58,7 @@ export default ({ hasHead, headText, hasBody, bodyText, hasLink, link, hasButton
                 hasImage && (
                     <div className="flex flex-col items-center justify-center">
                         
-                        <img className="w-[200px] h-[225px] my-2" src={imageSRC} />
+                        <img className="w-[180px] h-[240px] my-2" src={imageSRC} />
                         
                         {
                             hasImageCaption && (
