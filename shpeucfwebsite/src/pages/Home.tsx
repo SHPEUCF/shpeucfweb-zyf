@@ -10,16 +10,23 @@ import DynamicCarousel from "../components/DynamicCarousel";
 /* Properties interface */
 interface BoardMemberCardProps {
 
-    name: string | "",
-    position: string | "",
-    imageSRC: string | ""
+    name: string,
+    position: string,
+    imageSRC: string
+
+};
+
+interface ConferenceCardProps {
+    name: string,
+    description: string,
+    link: string
 
 };
 
 export default () => {
 
     /* Has the image SRC paths for all of the board members. */
-    const boardMembersData:any = [
+    const boardMembersData:BoardMemberCardProps[] = [
         { name: "Nick Libreros", position: "President", imageSRC: "./pictures/board/NickL.png" },
         { name: "Andres Acevedo", position: "Vice President", imageSRC: "./pictures/board/AndresA.png" },
         { name: "Steph Colton", position: "Secretary", imageSRC: "./pictures/board/StephC.png" },
@@ -34,6 +41,13 @@ export default () => {
         { name: "Bea Navas", position: "SHPEtinas Chair", imageSRC: "./pictures/board/BeaN.png" },
         { name: "Bryce Villanueva", position: "Technology Chair", imageSRC: "./pictures/board/BryceV.png" },
     ];
+
+    const conferenceData:ConferenceCardProps[] = [
+        { name: "SHPE 2023 Conference", description: "Join SHPE in our signature event and the largest gathering of Hispanics in STEM in the country in Salt Lake City, Utah. (Nov 1-5 '23)", link: "https://shpe.org/2023/" },
+        { name: "LeaderSHPE Live!", description: "These three all-new LeaderSHPE Live regional, in-person events will equip SHPE members to be leaders — in their chapter, their workplace, and their community.", link: "https://shpe.org/leadershpe-live/" },
+        { name: "SHPExchange", description: "This online series will give companies and attendees an opportunity to exchange ideas and make connections in a setting focused on their industry alone. (Mar 30-31 '23)", link: "https://shpe.org/shpexchange/"},
+        { name: "ALPFA 2023 Conference", description: "Where partners recruit Latino talent, business and thought leaders lead innovative conversations, and the ALPFAmilia reunites. (Aug 20-24 '23) ", link: "https://www.alpfa.org/page/convention-2023/" },
+    ]
 
     return (
 
@@ -94,37 +108,24 @@ export default () => {
                 <h2 id="upcomingconferences" className="my-8 text-2xl font-extrabold text-gray-900">Upcoming Conferences</h2>
 
                 <div className="w-full flex flex-wrap items-center sm:flex-col sm:justify-evenly md:flex-row md:justify-center">
+                    {
+                        conferenceData.map((conference:ConferenceCardProps) => {
+                            const { name, description, link } = conference;
 
-                    <DynamicCard
-
-                        hasHead={true}
-                        headText={"SHPE 2023 Conference"}
-                        hasBody={true}
-                        bodyText={"Attend the largest engineering conference in the country."}
-                        hasButton={true}
-                        buttonText={"Learn more"}
-                        hasLink={true}
-                        link={"https://shpe.org/2023-2/"}
-                        hasImage={false}
-                        hasImageCaption={false}
-
-                    />
-
-                    <DynamicCard
-
-                        hasHead={true}
-                        headText={"ALPFA 2023 Conference"}
-                        hasBody={true}
-                        bodyText={"Attend the largest business and finance conference in the country."}
-                        hasButton={true}
-                        buttonText={"Learn more"}
-                        hasLink={true}
-                        link={"https://www.alpfa.org/page/convention-2023/"}
-                        hasImage={false}
-                        hasImageCaption={false}
-
-                    />
-
+                            return <DynamicCard
+                                hasHead={true}
+                                headText={name}
+                                hasBody={true}
+                                bodyText={description}
+                                hasButton={true}
+                                buttonText={"Learn more"}
+                                hasLink={true}
+                                link={link}
+                                hasImage={false}
+                                hasImageCaption={false}
+                            />
+                        })
+                    }
                 </div>
 
             </div>
